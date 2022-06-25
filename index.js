@@ -1,3 +1,5 @@
+// ADITYA GUPTA @adiig7
+
 const Discord = require("discord.js")
 require("dotenv").config();
 const generateImage = require('./generateImage');
