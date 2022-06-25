@@ -10,9 +10,20 @@ const client = new Discord.Client({
     ]
 });
 
-client.on("ready", () => {
-    console.log(`Logged in as ${client.user.tag}`);
-});
+let bot = {
+    client,
+    prefix: "n.",
+    owners: ["715064307309871104"]
+}
+
+client.commands = new Discord.Collection()
+client.events = new Discord.Collection()
+
+client.loadEvents = (bot, reload) => require("./handlers/events")(bot, reload);
+client.loadEvents(bot, false);
+
+client.loadCommands = (bot, reload) => require("./handlers/commands")(bot, reload);
+client.loadCommands(bot, false);
 
 client.on("messageCreate", (message) => {
     if (message.content === "hey") {
@@ -29,3 +40,5 @@ client.on("guildMemberAdd", async (member) => {
     })
 })
 client.login(process.env.TOKEN); 
+
+module.exports = bot;
