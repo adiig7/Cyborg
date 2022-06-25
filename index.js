@@ -37,8 +37,9 @@ client.on("guildMemberAdd", async (member) => {
     member.guild.channels.cache.get(welcomeChannelId).send({
         content: `<@${member.id}> Welcome to the server!`,
         files: [img]
-    })
-})
+    });
+});
+
 client.login(process.env.TOKEN); 
 
 module.exports = bot;
