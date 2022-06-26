@@ -40,5 +40,8 @@ A Discord bot that greets a user whenever the user hops into the server. A bot y
 <br />
 
 
-*Bot is still under construction!* 🏗️ 🛠️
+**Bot is still under construction!** 🏗️ 🛠️
 
+<br>
+
+**Note: I am facing some issues in deploying this bot, but I'll sorting that out soon. Peace** 🕊️
